@@ -1,0 +1,23 @@
+.ThankYou {
+    .Card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px 0;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .rate-score {
+        color: var(--orange);
+        background-color: var(--dark-blue);
+        padding: 10px 20px;
+        border-radius: 22.5px;
+    }
+
+    p {
+        text-align: center;
+    }
+}

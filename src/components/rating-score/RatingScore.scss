@@ -1,0 +1,35 @@
+.RatingScore {
+    .score-list {
+        display: flex;
+        gap: 0 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .score {
+            font-size: 1rem;
+            color: var(--medium-grey);
+            font-weight: 700;
+
+            &.selected {
+                button {
+                    background-color: var(--light-grey);
+                    color: white;
+                }
+            }
+
+            button {
+                padding: 12px 17px;;
+                background-color: var(--dark-blue);
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: var(--orange);
+                    color: white;
+                }
+            }
+
+
+
+        }
+    }
+}

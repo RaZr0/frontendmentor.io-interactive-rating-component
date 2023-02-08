@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import RateUs from './components/rate-us/RateUs';
+import ThankYou from './components/thank-you/ThankYou';
+
+const MAX_SCORE = 5;
 
 function App() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [score, setScore] = useState(true);
+
+  const onRateSubmitted = (score) => {
+    setIsSubmitted(true);
+    setScore(score);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <section className='content'>
+          <div className="container">
+            {
+              !isSubmitted ?
+                <RateUs onSubmitted={onRateSubmitted} maxScore={MAX_SCORE} /> : <ThankYou rateScore={score} maxScore={MAX_SCORE} />
+            }
+
+          </div>
+        </section>
+
+      </main>
+
+
     </div>
   );
 }

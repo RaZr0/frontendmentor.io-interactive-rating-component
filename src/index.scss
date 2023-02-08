@@ -1,0 +1,51 @@
+@import './styles/reset.css';
+
+@font-face {
+    font-family: Overpass;
+    src: url(./fonts/Overpass-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Overpass;
+    src: url(./fonts/Overpass-Bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    //Primary
+    --orange: hsl(25, 97%, 53%);
+
+    // Neutral
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body{
+    font-size: 93.75%;
+    font-family: Overpass;
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 0 24px;
+}
+
+
+p {
+    color: var(--light-grey);
+    font-size: 0.9333rem;
+    line-height: 1.4667rem;
+}
+
+.title{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
